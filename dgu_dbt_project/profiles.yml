@@ -1,0 +1,12 @@
+dgu_dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: dataglowup-458411
+      dataset: bronze        # Inicialmente bronze
+      threads: 4
+      keyfile: C:\Users\henrique.soares\Desktop\DGU 44\dataglowup-458411-4a4b4b3a4f14.json
+      timeout_seconds: 300
+      location: us
