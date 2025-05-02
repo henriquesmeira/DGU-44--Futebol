@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: corinthiansbronze
+    description: "Tabela bronze com dados brutos do time do Corinthians"
