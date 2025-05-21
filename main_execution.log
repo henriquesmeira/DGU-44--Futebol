@@ -1,0 +1,390 @@
+2025-05-21 11:22:57,888 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-05-21 11:22:57,888 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-05-21 11:22:58,219 - ERROR - Erro desconhecido ao processar https://fbref.com/en/squads/abdce579/Palmeiras-Stats: ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-05-21 11:22:58,220 - WARNING - Nenhum dado extraído para palmeiras
+2025-05-21 11:22:58,220 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-05-21 11:22:58,507 - ERROR - Erro desconhecido ao processar https://fbref.com/en/squads/639950ae/Flamengo-Stats: ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-05-21 11:22:58,507 - WARNING - Nenhum dado extraído para flamengo
+2025-05-21 11:22:58,508 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-05-21 11:22:58,798 - ERROR - Erro desconhecido ao processar https://fbref.com/en/squads/bf4acd28/Corinthians-Stats: ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-05-21 11:22:58,798 - WARNING - Nenhum dado extraído para corinthians
+2025-05-21 11:22:58,798 - INFO - Extraídos 0 dataframes de estatísticas
+2025-05-21 11:22:58,798 - INFO - A extrair valor de mercado de corinthians em https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1
+2025-05-21 11:23:08,619 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1: ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-05-21 11:23:08,619 - WARNING - Nenhum dado de valor de mercado extraído para corinthians
+2025-05-21 11:23:08,619 - INFO - A extrair valor de mercado de palmeiras em https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1
+2025-05-21 11:23:20,244 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1: ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-05-21 11:23:20,244 - WARNING - Nenhum dado de valor de mercado extraído para palmeiras
+2025-05-21 11:23:20,245 - INFO - A extrair valor de mercado de flamengo em https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1
+2025-05-21 11:23:33,390 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1: ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-05-21 11:23:33,390 - WARNING - Nenhum dado de valor de mercado extraído para flamengo
+2025-05-21 11:23:33,390 - INFO - Extraídos 0 dataframes de valor de mercado
+2025-05-21 11:23:33,390 - INFO - Total de 0 dataframes para envio ao BigQuery
+2025-05-21 11:23:34,251 - INFO - Dataset DataGlowUp já existe.
+2025-05-21 11:23:34,251 - INFO - Resumo do envio: 0 tabelas enviadas com sucesso, 0 falhas
+2025-05-21 11:23:34,251 - INFO - Processo concluído com sucesso!
+2025-05-21 11:23:55,157 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-05-21 11:23:55,157 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-05-21 11:23:55,573 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-05-21 11:23:55,960 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-05-21 11:23:56,345 - INFO - Extraídos 3 dataframes de estatísticas
+2025-05-21 11:23:56,345 - INFO - A extrair valor de mercado de corinthians em https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1
+2025-05-21 11:24:25,391 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1: AttributeError: 'int' object has no attribute 'strip'
+2025-05-21 11:24:25,392 - WARNING - Nenhum dado de valor de mercado extraído para corinthians
+2025-05-21 11:24:25,392 - INFO - A extrair valor de mercado de palmeiras em https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1
+2025-05-21 11:24:26,330 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1: AttributeError: 'int' object has no attribute 'strip'
+2025-05-21 11:24:26,330 - WARNING - Nenhum dado de valor de mercado extraído para palmeiras
+2025-05-21 11:24:26,330 - INFO - A extrair valor de mercado de flamengo em https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1
+2025-05-21 11:24:30,607 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1: AttributeError: 'int' object has no attribute 'strip'
+2025-05-21 11:24:30,607 - WARNING - Nenhum dado de valor de mercado extraído para flamengo
+2025-05-21 11:24:30,607 - INFO - Extraídos 0 dataframes de valor de mercado
+2025-05-21 11:24:30,607 - INFO - Total de 3 dataframes para envio ao BigQuery
+2025-05-21 11:24:31,250 - INFO - Dataset DataGlowUp já existe.
+2025-05-21 11:24:31,252 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0...
+2025-05-21 11:24:35,769 - INFO - ✔ 30 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0
+2025-05-21 11:24:35,770 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0...
+2025-05-21 11:24:39,661 - INFO - ✔ 31 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0
+2025-05-21 11:24:39,662 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0...
+2025-05-21 11:24:42,946 - INFO - ✔ 34 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
+2025-05-21 11:24:42,946 - INFO - Resumo do envio: 3 tabelas enviadas com sucesso, 0 falhas
+2025-05-21 11:24:42,946 - INFO - Processo concluído com sucesso!
+2025-05-21 11:27:30,695 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-05-21 11:27:30,695 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-05-21 11:27:31,097 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-05-21 11:27:31,480 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-05-21 11:27:31,844 - INFO - Extraídos 3 dataframes de estatísticas
+2025-05-21 11:27:31,845 - INFO - A extrair valor de mercado de corinthians em https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:27:31,845 - INFO - ====== WebDriver manager ======
+2025-05-21 11:27:31,938 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:27:32,030 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:27:32,077 - INFO - There is no [linux64] chromedriver "136.0.7103.94" for browser google-chrome "136.0.7103" in cache
+2025-05-21 11:27:32,077 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:27:32,201 - INFO - WebDriver version 136.0.7103.94 selected
+2025-05-21 11:27:32,203 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/linux64/chromedriver-linux64.zip
+2025-05-21 11:27:32,204 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/linux64/chromedriver-linux64.zip
+2025-05-21 11:27:32,309 - INFO - Driver downloading response is 200
+2025-05-21 11:27:32,445 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:27:32,577 - INFO - Driver has been saved in cache [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94]
+2025-05-21 11:27:32,799 - INFO - Navegando para https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:27:34,641 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 com Selenium: AttributeError: 'int' object has no attribute 'strip'
+2025-05-21 11:27:34,713 - WARNING - Nenhum dado de valor de mercado extraído para corinthians
+2025-05-21 11:27:34,714 - INFO - A extrair valor de mercado de palmeiras em https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:27:34,714 - INFO - ====== WebDriver manager ======
+2025-05-21 11:27:34,808 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:27:34,856 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:27:34,902 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:27:35,113 - INFO - Navegando para https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:27:36,474 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 com Selenium: AttributeError: 'int' object has no attribute 'strip'
+2025-05-21 11:27:36,535 - WARNING - Nenhum dado de valor de mercado extraído para palmeiras
+2025-05-21 11:27:36,535 - INFO - A extrair valor de mercado de flamengo em https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:27:36,535 - INFO - ====== WebDriver manager ======
+2025-05-21 11:27:36,628 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:27:36,673 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:27:36,717 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:27:36,947 - INFO - Navegando para https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:27:55,785 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 com Selenium: AttributeError: 'int' object has no attribute 'strip'
+2025-05-21 11:27:55,852 - WARNING - Nenhum dado de valor de mercado extraído para flamengo
+2025-05-21 11:27:55,852 - INFO - Extraídos 0 dataframes de valor de mercado
+2025-05-21 11:27:55,852 - INFO - Total de 3 dataframes para envio ao BigQuery
+2025-05-21 11:27:56,568 - INFO - Dataset DataGlowUp já existe.
+2025-05-21 11:27:56,569 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0...
+2025-05-21 11:28:01,507 - INFO - ✔ 30 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0
+2025-05-21 11:28:01,509 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0...
+2025-05-21 11:28:05,746 - INFO - ✔ 31 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0
+2025-05-21 11:28:05,780 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0...
+2025-05-21 11:28:09,159 - INFO - ✔ 34 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
+2025-05-21 11:28:09,159 - INFO - Resumo do envio: 3 tabelas enviadas com sucesso, 0 falhas
+2025-05-21 11:28:09,159 - INFO - Processo concluído com sucesso!
+2025-05-21 11:30:27,729 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-05-21 11:30:27,729 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-05-21 11:30:28,362 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-05-21 11:30:28,720 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-05-21 11:30:29,092 - INFO - Extraídos 3 dataframes de estatísticas
+2025-05-21 11:30:29,092 - INFO - A extrair valor de mercado de corinthians em https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:30:29,092 - INFO - ====== WebDriver manager ======
+2025-05-21 11:30:29,187 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:30:29,235 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:30:29,280 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:30:29,524 - INFO - Navegando para https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:30:31,624 - INFO - A extrair valor de mercado de palmeiras em https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:30:31,624 - INFO - ====== WebDriver manager ======
+2025-05-21 11:30:31,719 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:30:31,768 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:30:31,813 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:30:32,036 - INFO - Navegando para https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:30:52,072 - INFO - A extrair valor de mercado de flamengo em https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:30:52,072 - INFO - ====== WebDriver manager ======
+2025-05-21 11:30:52,167 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:30:52,212 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:30:52,257 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:30:52,500 - INFO - Navegando para https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:31:03,333 - INFO - Extraídos 3 dataframes de valor de mercado
+2025-05-21 11:31:03,333 - INFO - Total de 6 dataframes para envio ao BigQuery
+2025-05-21 11:31:04,157 - INFO - Dataset DataGlowUp já existe.
+2025-05-21 11:31:04,159 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0...
+2025-05-21 11:31:08,143 - INFO - ✔ 30 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0
+2025-05-21 11:31:08,145 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0...
+2025-05-21 11:31:12,150 - INFO - ✔ 31 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0
+2025-05-21 11:31:12,152 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0...
+2025-05-21 11:31:19,146 - INFO - ✔ 34 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
+2025-05-21 11:31:19,147 - WARNING - Tabela corinthians_tabela_0_mercado possui colunas completamente vazias: ['2']
+2025-05-21 11:31:19,148 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0_mercado...
+2025-05-21 11:31:23,425 - INFO - ✔ 1 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0_mercado
+2025-05-21 11:31:23,426 - WARNING - Tabela palmeiras_tabela_0_mercado possui colunas completamente vazias: ['2']
+2025-05-21 11:31:23,426 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0_mercado...
+2025-05-21 11:31:27,402 - INFO - ✔ 1 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0_mercado
+2025-05-21 11:31:27,403 - WARNING - Tabela flamengo_tabela_0_mercado possui colunas completamente vazias: ['2']
+2025-05-21 11:31:27,403 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0_mercado...
+2025-05-21 11:31:31,943 - INFO - ✔ 1 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0_mercado
+2025-05-21 11:31:31,943 - INFO - Resumo do envio: 6 tabelas enviadas com sucesso, 0 falhas
+2025-05-21 11:31:31,943 - INFO - Processo concluído com sucesso!
+2025-05-21 11:32:19,865 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-05-21 11:32:19,865 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-05-21 11:32:20,292 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-05-21 11:32:20,701 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-05-21 11:32:21,119 - INFO - Extraídos 3 dataframes de estatísticas
+2025-05-21 11:32:21,119 - INFO - A extrair valor de mercado de corinthians em https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:32:21,119 - INFO - ====== WebDriver manager ======
+2025-05-21 11:32:21,213 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:32:21,259 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:32:21,305 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:32:21,539 - INFO - Navegando para https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:32:22,908 - INFO - A extrair valor de mercado de palmeiras em https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:32:22,908 - INFO - ====== WebDriver manager ======
+2025-05-21 11:32:23,005 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:32:23,054 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:32:23,100 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:32:23,304 - INFO - Navegando para https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:32:25,429 - INFO - A extrair valor de mercado de flamengo em https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:32:25,430 - INFO - ====== WebDriver manager ======
+2025-05-21 11:32:25,525 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:32:25,571 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:32:25,617 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:32:25,841 - INFO - Navegando para https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:32:27,645 - INFO - Extraídos 3 dataframes de valor de mercado
+2025-05-21 11:32:27,646 - INFO - Total de 6 dataframes para envio ao BigQuery
+2025-05-21 11:32:28,358 - INFO - Dataset DataGlowUp já existe.
+2025-05-21 11:32:28,359 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0...
+2025-05-21 11:32:32,283 - INFO - ✔ 30 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0
+2025-05-21 11:32:32,285 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0...
+2025-05-21 11:32:35,963 - INFO - ✔ 31 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0
+2025-05-21 11:32:35,965 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0...
+2025-05-21 11:32:40,877 - INFO - ✔ 34 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
+2025-05-21 11:32:40,878 - WARNING - Tabela corinthians_tabela_1_mercado possui colunas completamente vazias: ['nac_', 'anterior', 'valor_de_mercado']
+2025-05-21 11:32:40,879 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_1_mercado...
+2025-05-21 11:32:44,534 - INFO - ✔ 96 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_1_mercado
+2025-05-21 11:32:44,535 - WARNING - Tabela palmeiras_tabela_1_mercado possui colunas completamente vazias: ['nac_', 'anterior', 'valor_de_mercado']
+2025-05-21 11:32:44,536 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_1_mercado...
+2025-05-21 11:32:48,912 - INFO - ✔ 93 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_1_mercado
+2025-05-21 11:32:48,912 - WARNING - Tabela flamengo_tabela_1_mercado possui colunas completamente vazias: ['nac_', 'anterior', 'valor_de_mercado']
+2025-05-21 11:32:48,913 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_1_mercado...
+2025-05-21 11:32:53,839 - INFO - ✔ 93 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_1_mercado
+2025-05-21 11:32:53,839 - INFO - Resumo do envio: 6 tabelas enviadas com sucesso, 0 falhas
+2025-05-21 11:32:53,839 - INFO - Processo concluído com sucesso!
+2025-05-21 11:35:48,525 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-05-21 11:35:48,526 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-05-21 11:35:48,925 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-05-21 11:35:49,298 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-05-21 11:35:49,664 - INFO - Extraídos 3 dataframes de estatísticas
+2025-05-21 11:35:49,664 - INFO - A extrair valor de mercado de corinthians em https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:35:49,665 - INFO - ====== WebDriver manager ======
+2025-05-21 11:35:49,757 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:35:49,802 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:35:49,846 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:35:50,061 - INFO - Navegando para https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:36:04,183 - INFO - A extrair valor de mercado de palmeiras em https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:36:04,184 - INFO - ====== WebDriver manager ======
+2025-05-21 11:36:04,283 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:36:04,328 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:36:04,373 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:36:04,600 - INFO - Navegando para https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:36:20,553 - INFO - A extrair valor de mercado de flamengo em https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:36:20,553 - INFO - ====== WebDriver manager ======
+2025-05-21 11:36:20,650 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:36:20,695 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:36:20,740 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:36:20,954 - INFO - Navegando para https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:36:44,651 - INFO - Extraídos 3 dataframes de valor de mercado
+2025-05-21 11:36:44,651 - INFO - Total de 6 dataframes para envio ao BigQuery
+2025-05-21 11:36:45,718 - INFO - Dataset DataGlowUp não encontrado. Criando...
+2025-05-21 11:36:46,277 - INFO - Dataset DataGlowUp criado com sucesso.
+2025-05-21 11:36:46,278 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0...
+2025-05-21 11:36:52,786 - INFO - ✔ 30 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0
+2025-05-21 11:36:52,787 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0...
+2025-05-21 11:36:57,200 - INFO - ✔ 31 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0
+2025-05-21 11:36:57,202 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0...
+2025-05-21 11:37:01,090 - INFO - ✔ 34 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
+2025-05-21 11:37:01,091 - WARNING - Tabela corinthians_tabela_0_mercado possui colunas completamente vazias: ['2']
+2025-05-21 11:37:01,091 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0_mercado...
+2025-05-21 11:37:04,681 - INFO - ✔ 1 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0_mercado
+2025-05-21 11:37:04,682 - WARNING - Tabela palmeiras_tabela_0_mercado possui colunas completamente vazias: ['2']
+2025-05-21 11:37:04,682 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0_mercado...
+2025-05-21 11:37:08,880 - INFO - ✔ 1 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0_mercado
+2025-05-21 11:37:08,881 - WARNING - Tabela flamengo_tabela_0_mercado possui colunas completamente vazias: ['2']
+2025-05-21 11:37:08,881 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0_mercado...
+2025-05-21 11:37:12,914 - INFO - ✔ 1 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0_mercado
+2025-05-21 11:37:12,914 - INFO - Resumo do envio: 6 tabelas enviadas com sucesso, 0 falhas
+2025-05-21 11:37:12,914 - INFO - Processo concluído com sucesso!
+2025-05-21 11:38:06,152 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-05-21 11:38:06,152 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-05-21 11:38:06,553 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-05-21 11:38:06,916 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-05-21 11:38:07,274 - INFO - Extraídos 3 dataframes de estatísticas
+2025-05-21 11:38:07,274 - INFO - A extrair valor de mercado de corinthians em https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:38:07,274 - INFO - ====== WebDriver manager ======
+2025-05-21 11:38:07,368 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:38:07,413 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:38:07,458 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:38:07,674 - INFO - Navegando para https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:38:12,391 - INFO - A extrair valor de mercado de palmeiras em https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:38:12,391 - INFO - ====== WebDriver manager ======
+2025-05-21 11:38:12,484 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:38:12,529 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:38:12,574 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:38:12,799 - INFO - Navegando para https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:38:37,743 - INFO - A extrair valor de mercado de flamengo em https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:38:37,743 - INFO - ====== WebDriver manager ======
+2025-05-21 11:38:37,840 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:38:37,885 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:38:37,929 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:38:38,141 - INFO - Navegando para https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:38:48,357 - INFO - Extraídos 3 dataframes de valor de mercado
+2025-05-21 11:38:48,357 - INFO - Total de 6 dataframes para envio ao BigQuery
+2025-05-21 11:38:49,219 - INFO - Dataset DataGlowUp não encontrado. Criando...
+2025-05-21 11:38:49,922 - INFO - Dataset DataGlowUp criado com sucesso.
+2025-05-21 11:38:49,923 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0...
+2025-05-21 11:38:54,693 - INFO - ✔ 30 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0
+2025-05-21 11:38:54,694 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0...
+2025-05-21 11:38:59,774 - INFO - ✔ 31 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0
+2025-05-21 11:38:59,776 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0...
+2025-05-21 11:39:03,578 - INFO - ✔ 34 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
+2025-05-21 11:39:03,579 - WARNING - Tabela corinthians_tabela_1_mercado possui colunas completamente vazias: ['nac_', 'anterior']
+2025-05-21 11:39:03,580 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_1_mercado...
+2025-05-21 11:39:10,689 - INFO - ✔ 96 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_1_mercado
+2025-05-21 11:39:10,689 - WARNING - Tabela palmeiras_tabela_1_mercado possui colunas completamente vazias: ['nac_', 'anterior']
+2025-05-21 11:39:10,690 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_1_mercado...
+2025-05-21 11:39:14,679 - INFO - ✔ 93 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_1_mercado
+2025-05-21 11:39:14,679 - WARNING - Tabela flamengo_tabela_1_mercado possui colunas completamente vazias: ['nac_', 'anterior']
+2025-05-21 11:39:14,680 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_1_mercado...
+2025-05-21 11:39:18,193 - INFO - ✔ 93 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_1_mercado
+2025-05-21 11:39:18,193 - INFO - Resumo do envio: 6 tabelas enviadas com sucesso, 0 falhas
+2025-05-21 11:39:18,193 - INFO - Processo concluído com sucesso!
+2025-05-21 11:53:14,027 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-05-21 11:53:14,027 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-05-21 11:53:14,607 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-05-21 11:53:15,128 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-05-21 11:53:15,687 - INFO - Extraídos 3 dataframes de estatísticas
+2025-05-21 11:53:15,687 - INFO - A extrair valor de mercado de corinthians em https://www.ogol.com.br/equipe/corinthians/valor-de-mercado
+2025-05-21 11:53:18,341 - INFO - A extrair valor de mercado de palmeiras em https://www.ogol.com.br/equipe/palmeiras/valor-de-mercado
+2025-05-21 11:53:21,147 - INFO - A extrair valor de mercado de flamengo em https://www.ogol.com.br/equipe/flamengo/valor-de-mercado
+2025-05-21 11:53:23,222 - INFO - Extraídos 3 dataframes de valor de mercado
+2025-05-21 11:53:23,222 - INFO - Total de 6 dataframes para envio ao BigQuery
+2025-05-21 11:53:24,041 - INFO - Dataset DataGlowUp já existe.
+2025-05-21 11:53:24,042 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0...
+2025-05-21 11:53:28,975 - INFO - ✔ 30 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0
+2025-05-21 11:53:28,976 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0...
+2025-05-21 11:53:33,150 - INFO - ✔ 31 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0
+2025-05-21 11:53:33,152 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0...
+2025-05-21 11:53:39,260 - INFO - ✔ 34 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
+2025-05-21 11:53:39,260 - WARNING - Tabela corinthians_tabela_0_mercado possui colunas completamente vazias: ['valor_de_mercado']
+2025-05-21 11:53:39,261 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0_mercado...
+2025-05-21 11:53:43,624 - INFO - ✔ 41 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0_mercado
+2025-05-21 11:53:43,625 - WARNING - Tabela palmeiras_tabela_0_mercado possui colunas completamente vazias: ['valor_de_mercado']
+2025-05-21 11:53:43,625 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0_mercado...
+2025-05-21 11:53:48,906 - INFO - ✔ 31 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0_mercado
+2025-05-21 11:53:48,907 - WARNING - Tabela flamengo_tabela_0_mercado possui colunas completamente vazias: ['valor_de_mercado']
+2025-05-21 11:53:48,908 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0_mercado...
+2025-05-21 11:53:52,349 - INFO - ✔ 48 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0_mercado
+2025-05-21 11:53:52,349 - INFO - Resumo do envio: 6 tabelas enviadas com sucesso, 0 falhas
+2025-05-21 11:53:52,349 - INFO - Processo concluído com sucesso!
+2025-05-21 11:57:03,463 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-05-21 11:57:03,463 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-05-21 11:57:03,838 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-05-21 11:57:04,214 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-05-21 11:57:04,605 - INFO - Extraídos 3 dataframes de estatísticas
+2025-05-21 11:57:04,605 - INFO - A extrair valor de mercado de corinthians em https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:57:04,605 - INFO - ====== WebDriver manager ======
+2025-05-21 11:57:04,698 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:57:04,746 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:57:04,792 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:57:05,023 - INFO - Navegando para https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:57:13,300 - INFO - A extrair valor de mercado de palmeiras em https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:57:13,300 - INFO - ====== WebDriver manager ======
+2025-05-21 11:57:13,394 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:57:13,442 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:57:13,488 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:57:13,705 - INFO - Navegando para https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:57:23,678 - INFO - A extrair valor de mercado de flamengo em https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 via Selenium
+2025-05-21 11:57:23,679 - INFO - ====== WebDriver manager ======
+2025-05-21 11:57:23,773 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:57:23,821 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 11:57:23,866 - INFO - Driver [/home/dadosdmxcapital/.wdm/drivers/chromedriver/linux64/136.0.7103.94/chromedriver-linux64/chromedriver] found in cache
+2025-05-21 11:57:24,080 - INFO - Navegando para https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1 com Selenium...
+2025-05-21 11:57:29,110 - INFO - Extraídos 3 dataframes de valor de mercado
+2025-05-21 11:57:29,110 - INFO - Total de 6 dataframes para envio ao BigQuery
+2025-05-21 11:57:29,914 - INFO - Dataset DataGlowUp não encontrado. Criando...
+2025-05-21 11:57:30,464 - INFO - Dataset DataGlowUp criado com sucesso.
+2025-05-21 11:57:30,466 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0...
+2025-05-21 11:57:35,286 - INFO - ✔ 30 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0
+2025-05-21 11:57:35,287 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0...
+2025-05-21 11:57:39,579 - INFO - ✔ 31 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0
+2025-05-21 11:57:39,581 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0...
+2025-05-21 11:57:43,480 - INFO - ✔ 34 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
+2025-05-21 11:57:43,480 - WARNING - Tabela corinthians_tabela_0_mercado possui colunas completamente vazias: ['2']
+2025-05-21 11:57:43,481 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0_mercado...
+2025-05-21 11:57:49,882 - INFO - ✔ 1 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0_mercado
+2025-05-21 11:57:49,883 - WARNING - Tabela palmeiras_tabela_0_mercado possui colunas completamente vazias: ['2']
+2025-05-21 11:57:49,884 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0_mercado...
+2025-05-21 11:57:53,172 - INFO - ✔ 1 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0_mercado
+2025-05-21 11:57:53,172 - WARNING - Tabela flamengo_tabela_0_mercado possui colunas completamente vazias: ['2']
+2025-05-21 11:57:53,173 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0_mercado...
+2025-05-21 11:57:58,895 - INFO - ✔ 1 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0_mercado
+2025-05-21 11:57:58,895 - INFO - Resumo do envio: 6 tabelas enviadas com sucesso, 0 falhas
+2025-05-21 11:57:58,895 - INFO - Processo concluído com sucesso!
+2025-05-21 12:01:10,322 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-05-21 12:01:10,322 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-05-21 12:01:10,726 - WARNING - Erro ao limpar e converter coluna unnamed:_0_level_0_player: str.replace() takes no keyword arguments
+2025-05-21 12:01:10,727 - WARNING - Erro ao limpar e converter coluna unnamed:_2_level_0_pos: str.replace() takes no keyword arguments
+2025-05-21 12:01:10,728 - WARNING - Erro ao limpar e converter coluna unnamed:_33_level_0_matches: str.replace() takes no keyword arguments
+2025-05-21 12:01:10,729 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-05-21 12:01:11,114 - WARNING - Erro ao limpar e converter coluna unnamed:_0_level_0_player: str.replace() takes no keyword arguments
+2025-05-21 12:01:11,115 - WARNING - Erro ao limpar e converter coluna unnamed:_2_level_0_pos: str.replace() takes no keyword arguments
+2025-05-21 12:01:11,116 - WARNING - Erro ao limpar e converter coluna unnamed:_33_level_0_matches: str.replace() takes no keyword arguments
+2025-05-21 12:01:11,116 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-05-21 12:01:11,510 - WARNING - Erro ao limpar e converter coluna unnamed:_0_level_0_player: str.replace() takes no keyword arguments
+2025-05-21 12:01:11,511 - WARNING - Erro ao limpar e converter coluna unnamed:_2_level_0_pos: str.replace() takes no keyword arguments
+2025-05-21 12:01:11,512 - WARNING - Erro ao limpar e converter coluna unnamed:_33_level_0_matches: str.replace() takes no keyword arguments
+2025-05-21 12:01:11,513 - INFO - Extraídos 3 dataframes de estatísticas
+2025-05-21 12:01:11,513 - INFO - A extrair valor de mercado de corinthians em https://www.ogol.com.br/equipe/corinthians/valor-de-mercado
+2025-05-21 12:01:12,313 - WARNING - Erro ao limpar e converter coluna jogador: str.replace() takes no keyword arguments
+2025-05-21 12:01:12,313 - WARNING - Erro ao limpar e converter coluna valor_de_mercado: str.replace() takes no keyword arguments
+2025-05-21 12:01:12,315 - INFO - A extrair valor de mercado de palmeiras em https://www.ogol.com.br/equipe/palmeiras/valor-de-mercado
+2025-05-21 12:01:27,392 - WARNING - Erro ao limpar e converter coluna jogador: str.replace() takes no keyword arguments
+2025-05-21 12:01:27,392 - WARNING - Erro ao limpar e converter coluna valor_de_mercado: str.replace() takes no keyword arguments
+2025-05-21 12:01:27,394 - INFO - A extrair valor de mercado de flamengo em https://www.ogol.com.br/equipe/flamengo/valor-de-mercado
+2025-05-21 12:01:28,476 - WARNING - Erro ao limpar e converter coluna jogador: str.replace() takes no keyword arguments
+2025-05-21 12:01:28,476 - WARNING - Erro ao limpar e converter coluna valor_de_mercado: str.replace() takes no keyword arguments
+2025-05-21 12:01:28,478 - INFO - Extraídos 3 dataframes de valor de mercado
+2025-05-21 12:01:28,478 - INFO - Total de 6 dataframes para envio ao BigQuery
+2025-05-21 12:01:29,561 - INFO - Dataset DataGlowUp não encontrado. Criando...
+2025-05-21 12:01:30,152 - INFO - Dataset DataGlowUp criado com sucesso.
+2025-05-21 12:01:30,153 - WARNING - Tabela palmeiras_tabela_0 possui colunas completamente vazias: ['unnamed:_1_level_0_nation']
+2025-05-21 12:01:30,154 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0...
+2025-05-21 12:01:35,005 - INFO - ✔ 30 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0
+2025-05-21 12:01:35,006 - WARNING - Tabela flamengo_tabela_0 possui colunas completamente vazias: ['unnamed:_1_level_0_nation']
+2025-05-21 12:01:35,007 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0...
+2025-05-21 12:01:40,165 - INFO - ✔ 31 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0
+2025-05-21 12:01:40,166 - WARNING - Tabela corinthians_tabela_0 possui colunas completamente vazias: ['unnamed:_1_level_0_nation']
+2025-05-21 12:01:40,167 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0...
+2025-05-21 12:01:44,772 - INFO - ✔ 34 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
+2025-05-21 12:01:44,773 - WARNING - Tabela corinthians_tabela_0_mercado possui colunas completamente vazias: ['final_contrato:', 'cláusula_rescisão']
+2025-05-21 12:01:44,774 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0_mercado...
+2025-05-21 12:01:50,377 - INFO - ✔ 41 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0_mercado
+2025-05-21 12:01:50,378 - WARNING - Tabela palmeiras_tabela_0_mercado possui colunas completamente vazias: ['final_contrato:', 'cláusula_rescisão']
+2025-05-21 12:01:50,379 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0_mercado...
+2025-05-21 12:01:54,286 - INFO - ✔ 31 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0_mercado
+2025-05-21 12:01:54,287 - WARNING - Tabela flamengo_tabela_0_mercado possui colunas completamente vazias: ['final_contrato:', 'cláusula_rescisão']
+2025-05-21 12:01:54,288 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0_mercado...
+2025-05-21 12:01:59,169 - INFO - ✔ 48 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0_mercado
+2025-05-21 12:01:59,169 - INFO - Resumo do envio: 6 tabelas enviadas com sucesso, 0 falhas
+2025-05-21 12:01:59,169 - INFO - Processo concluído com sucesso!

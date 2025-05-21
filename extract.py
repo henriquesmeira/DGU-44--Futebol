@@ -2,13 +2,17 @@ import pandas as pd
 import requests
 from datetime import datetime
 import logging
-from io import StringIO # Importar StringIO para lidar com FutureWarning
+from io import StringIO
 
 # Configuração de logging
 logger = logging.getLogger("extract")
 
 def extrair_tabelas_selecionadas(url, nome_time, indice_tabelas):
-    """Extrai tabelas específicas de uma URL com tratamento de erro."""
+    """
+    Extrai tabelas específicas de uma URL usando requests e pandas.read_html.
+    Esta função é adequada para páginas com conteúdo estático (não gerado por JS).
+    Inclui lógica aprimorada para limpeza de valores monetários com 'M'/'K'.
+    """
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     }
@@ -16,7 +20,7 @@ def extrair_tabelas_selecionadas(url, nome_time, indice_tabelas):
     try:
         # Tentativa de acesso com tratamento de erro e timeout
         response = requests.get(url, headers=headers, timeout=30)
-        response.raise_for_status()
+        response.raise_for_status() # Levanta um erro para códigos de status HTTP ruins (4xx ou 5xx)
         
         # Usar StringIO para silenciar FutureWarning e garantir que pd.read_html
         # trate a string como um objeto de arquivo
@@ -46,17 +50,51 @@ def extrair_tabelas_selecionadas(url, nome_time, indice_tabelas):
                     for col in df.columns
                 ]
                 
-                # Limpeza de valores monetários/percentuais
+                # Limpeza de valores monetários/percentuais e outros textos
                 for col in df.select_dtypes(include=['object']).columns:
                     try:
-                        # Adicionado .astype(str) para robustez ao lidar com tipos mistos
-                        if df[col].astype(str).str.contains('R\$|\$|€|%', na=False).any():
-                            df[col] = df[col].astype(str).str.replace('R\$|\$|€|%', '', regex=True)
-                            df[col] = df[col].str.replace('.', '', regex=False)  # Remove separador de milhar
-                            df[col] = df[col].str.replace(',', '.', regex=False)  # Converte vírgula para ponto decimal
-                            df[col] = pd.to_numeric(df[col], errors='coerce')
+                        original_values = df[col].astype(str)
+                        
+                        # Verifica se a coluna contém símbolos de moeda OU 'M'/'K'
+                        # Esta condição torna a limpeza específica para valores de mercado ou números formatados de forma similar
+                        if original_values.str.contains(r'R\$|\$|€|%|M|K', na=False).any():
+                            cleaned_values = original_values.str.replace(r'R\$|\$|€|%', '', regex=True).str.strip()
+
+                            def _convert_market_value_internal(val):
+                                if pd.isna(val) or str(val).strip().lower() == 'none': # Lida com NaN real ou string 'None'
+                                    return val
+                                val_str = str(val).strip()
+                                if 'M' in val_str:
+                                    num_str = val_str.replace('M', '').strip().replace(',', '.')
+                                    try:
+                                        return float(num_str) * 1_000_000
+                                    except ValueError:
+                                        return val_str # Retorna como string se a conversão falhar
+                                elif 'K' in val_str:
+                                    num_str = val_str.replace('K', '').strip().replace(',', '.')
+                                    try:
+                                        return float(num_str) * 1_000
+                                    except ValueError:
+                                        return val_str # Retorna como string se a conversão falhar
+                                else:
+                                    # Para valores sem 'M' ou 'K', tenta a conversão direta
+                                    # Remove o ponto como separador de milhar e substitui vírgula por ponto decimal
+                                    num_str = val_str.replace('.', '', regex=False).replace(',', '.', regex=False)
+                                    try:
+                                        return float(num_str)
+                                    except ValueError:
+                                        return val_str # Retorna como string se a conversão falhar
+                            
+                            df[col] = cleaned_values.apply(_convert_market_value_internal)
+                        else:
+                            # Para outras colunas de objeto que não possuem moeda/M/K,
+                            # tenta uma conversão numérica geral (se aplicável)
+                            temp_col = original_values.str.replace('.', '', regex=False) # Remove separadores de milhar
+                            temp_col = temp_col.str.replace(',', '.', regex=False) # Converte vírgula decimal para ponto
+                            df[col] = pd.to_numeric(temp_col, errors='coerce')
+
                     except Exception as err:
-                        logger.warning(f"Erro ao limpar coluna {col}: {err}")
+                        logger.warning(f"Erro ao limpar e converter coluna {col}: {err}")
                 
                 # Adiciona metadados
                 df['time'] = nome_time
@@ -99,17 +137,18 @@ def extrair_dados():
     return dataframes
 
 def valor_mercado():
-    """Extrai dados de valor de mercado do transfermarkt.com."""
-    indice_desejado = [0]
+    """Extrai dados de valor de mercado do ogol.com.br usando requests e pandas.read_html."""
+    indice_desejado = [0] # Geralmente a primeira tabela é a de jogadores
     urls_times = {
-        "corinthians": 'https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1',
-        "palmeiras": 'https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1',
-        "flamengo": 'https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1'
+        "corinthians": 'https://www.ogol.com.br/equipe/corinthians/valor-de-mercado',
+        "palmeiras": 'https://www.ogol.com.br/equipe/palmeiras/valor-de-mercado',
+        "flamengo": 'https://www.ogol.com.br/equipe/flamengo/valor-de-mercado'
     }
 
     dataframes = {}
     for nome, url in urls_times.items():
         logger.info(f"A extrair valor de mercado de {nome} em {url}")
+        # Chama a função baseada em requests (extrair_tabelas_selecionadas)
         df_mercado = extrair_tabelas_selecionadas(url, nome, indice_desejado)
         if df_mercado:
             # Renomeando para diferenciar das tabelas de estatísticas
