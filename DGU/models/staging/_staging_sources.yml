@@ -1,0 +1,59 @@
+version: 2
+
+sources:
+  - name: seeds
+    description: "Dados brutos dos seeds do dbt"
+    tables:
+      - name: palmeiras_tabela_0
+        description: "Estatísticas dos jogadores do Palmeiras"
+        columns:
+          - name: player
+            description: "Nome do jogador"
+          - name: nation
+            description: "Nacionalidade do jogador"
+          - name: pos
+            description: "Posição do jogador"
+          - name: age
+            description: "Idade do jogador"
+          - name: mp
+            description: "Jogos disputados"
+          - name: gls
+            description: "Gols marcados"
+          - name: ast
+            description: "Assistências"
+          - name: time
+            description: "Nome do time"
+          - name: data_extracao
+            description: "Data da extração dos dados"
+
+      - name: flamengo_tabela_0
+        description: "Estatísticas dos jogadores do Flamengo"
+        
+      - name: corinthians_tabela_0
+        description: "Estatísticas dos jogadores do Corinthians"
+        
+      - name: palmeiras_tabela_0_mercado
+        description: "Valores de mercado dos jogadores do Palmeiras"
+        columns:
+          - name: player
+            description: "Nome do jogador"
+          - name: position
+            description: "Posição detalhada do jogador"
+          - name: age
+            description: "Idade do jogador"
+          - name: nationality
+            description: "Nacionalidade do jogador"
+          - name: market_value_eur
+            description: "Valor de mercado em euros"
+          - name: contract_expires
+            description: "Data de expiração do contrato"
+          - name: time
+            description: "Nome do time"
+          - name: data_extracao
+            description: "Data da extração dos dados"
+            
+      - name: flamengo_tabela_0_mercado
+        description: "Valores de mercado dos jogadores do Flamengo"
+        
+      - name: corinthians_tabela_0_mercado
+        description: "Valores de mercado dos jogadores do Corinthians"

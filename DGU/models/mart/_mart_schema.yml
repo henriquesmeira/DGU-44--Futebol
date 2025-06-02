@@ -1,0 +1,96 @@
+version: 2
+
+models:
+  - name: mart_players_stats
+    description: "Tabela consolidada com estatísticas de todos os jogadores dos três times"
+    columns:
+      - name: player_id
+        description: "Identificador único do jogador (time_nome)"
+        tests:
+          - unique
+          - not_null
+      - name: player_name
+        description: "Nome do jogador"
+        tests:
+          - not_null
+      - name: team_name
+        description: "Nome do time"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['palmeiras', 'flamengo', 'corinthians']
+      - name: position_full_name
+        description: "Posição completa do jogador"
+        tests:
+          - accepted_values:
+              values: ['Goalkeeper', 'Defender', 'Midfielder', 'Attacker']
+      - name: goals
+        description: "Total de gols marcados"
+        tests:
+          - not_null
+      - name: assists
+        description: "Total de assistências"
+        tests:
+          - not_null
+      - name: goals_per_90min
+        description: "Média de gols por 90 minutos"
+      - name: scoring_classification
+        description: "Classificação do jogador baseada em gols por 90min"
+
+  - name: mart_players_market_value
+    description: "Tabela consolidada com valores de mercado de todos os jogadores"
+    columns:
+      - name: player_id
+        description: "Identificador único do jogador (time_nome)"
+        tests:
+          - unique
+          - not_null
+      - name: player_name
+        description: "Nome do jogador"
+        tests:
+          - not_null
+      - name: team_name
+        description: "Nome do time"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['palmeiras', 'flamengo', 'corinthians']
+      - name: market_value_euros
+        description: "Valor de mercado em euros"
+        tests:
+          - not_null
+      - name: market_value_category
+        description: "Categoria do valor de mercado"
+        tests:
+          - accepted_values:
+              values: ['Very High', 'High', 'Medium', 'Low', 'Very Low']
+      - name: contract_status
+        description: "Status do contrato baseado na data de expiração"
+        tests:
+          - accepted_values:
+              values: ['Expiring Soon', 'Medium Term', 'Long Term']
+      - name: player_value_profile
+        description: "Perfil do jogador baseado em idade e valor"
+
+  - name: mart_teams_summary
+    description: "Resumo consolidado por time com estatísticas e valores de mercado"
+    columns:
+      - name: team_name
+        description: "Nome do time"
+        tests:
+          - unique
+          - not_null
+          - accepted_values:
+              values: ['palmeiras', 'flamengo', 'corinthians']
+      - name: total_players
+        description: "Total de jogadores no elenco"
+        tests:
+          - not_null
+      - name: total_goals
+        description: "Total de gols marcados pelo time"
+      - name: total_squad_value_euros
+        description: "Valor total do elenco em euros"
+      - name: team_scoring_classification
+        description: "Classificação do time baseada em gols totais"
+      - name: squad_value_classification
+        description: "Classificação do elenco baseada no valor total"

@@ -1,0 +1,50 @@
+2025-06-02 15:07:54,090 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-06-02 15:07:54,090 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-06-02 15:07:54,790 - ERROR - Erro desconhecido ao processar https://fbref.com/en/squads/abdce579/Palmeiras-Stats: ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-06-02 15:07:54,791 - WARNING - Nenhum dado extraído para palmeiras
+2025-06-02 15:07:54,791 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-06-02 15:07:55,369 - ERROR - Erro desconhecido ao processar https://fbref.com/en/squads/639950ae/Flamengo-Stats: ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-06-02 15:07:55,370 - WARNING - Nenhum dado extraído para flamengo
+2025-06-02 15:07:55,370 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-06-02 15:07:55,938 - ERROR - Erro desconhecido ao processar https://fbref.com/en/squads/bf4acd28/Corinthians-Stats: ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-06-02 15:07:55,938 - WARNING - Nenhum dado extraído para corinthians
+2025-06-02 15:07:55,939 - INFO - Extraídos 0 dataframes de estatísticas
+2025-06-02 15:07:55,939 - INFO - A extrair valor de mercado de corinthians em https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1
+2025-06-02 15:07:58,083 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1: ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-06-02 15:07:58,083 - WARNING - Nenhum dado de valor de mercado extraído para corinthians
+2025-06-02 15:07:58,083 - INFO - A extrair valor de mercado de palmeiras em https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1
+2025-06-02 15:08:01,825 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1: ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-06-02 15:08:01,825 - WARNING - Nenhum dado de valor de mercado extraído para palmeiras
+2025-06-02 15:08:01,826 - INFO - A extrair valor de mercado de flamengo em https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1
+2025-06-02 15:08:02,911 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1: ImportError: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-06-02 15:08:02,911 - WARNING - Nenhum dado de valor de mercado extraído para flamengo
+2025-06-02 15:08:02,911 - INFO - Extraídos 0 dataframes de valor de mercado
+2025-06-02 15:08:02,911 - INFO - Total de 0 dataframes para envio ao BigQuery
+2025-06-02 15:08:04,010 - INFO - Dataset DataGlowUp já existe.
+2025-06-02 15:08:04,010 - INFO - Resumo do envio: 0 tabelas enviadas com sucesso, 0 falhas
+2025-06-02 15:08:04,010 - INFO - Processo concluído com sucesso!
+2025-06-02 15:08:40,284 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-06-02 15:08:40,284 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-06-02 15:08:40,910 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-06-02 15:08:41,516 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-06-02 15:08:42,133 - INFO - Extraídos 3 dataframes de estatísticas
+2025-06-02 15:08:42,133 - INFO - A extrair valor de mercado de corinthians em https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1
+2025-06-02 15:08:43,567 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1: AttributeError: 'int' object has no attribute 'strip'
+2025-06-02 15:08:43,567 - WARNING - Nenhum dado de valor de mercado extraído para corinthians
+2025-06-02 15:08:43,567 - INFO - A extrair valor de mercado de palmeiras em https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1
+2025-06-02 15:08:44,738 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1: AttributeError: 'int' object has no attribute 'strip'
+2025-06-02 15:08:44,739 - WARNING - Nenhum dado de valor de mercado extraído para palmeiras
+2025-06-02 15:08:44,739 - INFO - A extrair valor de mercado de flamengo em https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1
+2025-06-02 15:09:06,994 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1: AttributeError: 'int' object has no attribute 'strip'
+2025-06-02 15:09:06,994 - WARNING - Nenhum dado de valor de mercado extraído para flamengo
+2025-06-02 15:09:06,994 - INFO - Extraídos 0 dataframes de valor de mercado
+2025-06-02 15:09:06,994 - INFO - Total de 3 dataframes para envio ao BigQuery
+2025-06-02 15:09:07,705 - INFO - Dataset DataGlowUp já existe.
+2025-06-02 15:09:07,707 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0...
+2025-06-02 15:09:12,839 - INFO - ✔ 30 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0
+2025-06-02 15:09:12,840 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0...
+2025-06-02 15:09:18,022 - INFO - ✔ 33 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0
+2025-06-02 15:09:18,023 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0...
+2025-06-02 15:09:22,129 - INFO - ✔ 35 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
+2025-06-02 15:09:22,129 - INFO - Resumo do envio: 3 tabelas enviadas com sucesso, 0 falhas
+2025-06-02 15:09:22,130 - INFO - Processo concluído com sucesso!

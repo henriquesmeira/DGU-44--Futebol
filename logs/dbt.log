@@ -1,0 +1,131 @@
+[0m14:30:14.764896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7669d2864bf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7669d2865160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7669d2864bc0>]}
+
+
+============================== 14:30:14.769069 | bd1568bb-7e94-4bc9-b302-5aa0685e7096 ==============================
+[0m14:30:14.769069 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:30:14.769471 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/dadosdmxcapital/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:30:14.783379 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'PosixPath'.. Dictionary: {'dir': PosixPath('/home/dadosdmxcapital/.dbt')}
+[0m14:30:14.783887 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m14:30:26.284115 [debug] [MainThread]: Starter project path: /home/dadosdmxcapital/.local/lib/python3.12/site-packages/dbt/include/starter_project
+[0m14:30:26.288082 [info ] [MainThread]: 
+Your new dbt project "DGU_44" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:30:26.288496 [info ] [MainThread]: Setting up your profile.
+[0m14:32:07.031169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x739621858ec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7396218591c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x739621858c20>]}
+
+
+============================== 14:32:07.033843 | 59682a3b-4a1c-4cf3-a2df-3b322d429374 ==============================
+[0m14:32:07.033843 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:32:07.034265 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/dadosdmxcapital/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:32:24.464321 [debug] [MainThread]: Starter project path: /home/dadosdmxcapital/.local/lib/python3.12/site-packages/dbt/include/starter_project
+[0m14:32:24.467038 [info ] [MainThread]: 
+Your new dbt project "DGU" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:32:24.467413 [info ] [MainThread]: Setting up your profile.
+[0m14:33:02.366885 [error] [MainThread]: Encountered an error:
+list index out of range
+[0m14:33:02.369296 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/dadosdmxcapital/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dadosdmxcapital/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dadosdmxcapital/.local/lib/python3.12/site-packages/dbt/cli/main.py", line 477, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/dadosdmxcapital/.local/lib/python3.12/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/home/dadosdmxcapital/.local/lib/python3.12/site-packages/dbt/task/init.py", line 261, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dadosdmxcapital/.local/lib/python3.12/site-packages/dbt/task/init.py", line 243, in ask_for_adapter_choice
+    return available_adapters[numeric_choice - 1]
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+
+[0m14:33:02.370678 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 55.37592, "process_in_blocks": "144", "process_kernel_time": 0.140837, "process_mem_max_rss": "94532", "process_out_blocks": "88", "process_user_time": 0.89397}
+[0m14:33:02.371205 [debug] [MainThread]: Command `dbt init` failed at 14:33:02.371118 after 55.38 seconds
+[0m14:33:02.371543 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x739621cd63c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x739621858ef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73962185aa50>]}
+[0m14:33:02.371908 [debug] [MainThread]: Flushing usage events
+[0m14:33:02.984947 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:33:17.535961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729d06860da0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729d06861040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729d06861100>]}
+
+
+============================== 14:33:17.538533 | 3155e263-255e-4542-ac3a-3f474a5975f0 ==============================
+[0m14:33:17.538533 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:33:17.538967 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/dadosdmxcapital/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:33:19.335223 [debug] [MainThread]: Starter project path: /home/dadosdmxcapital/.local/lib/python3.12/site-packages/dbt/include/starter_project
+[0m14:33:19.337807 [info ] [MainThread]: 
+Your new dbt project "DGU" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:33:19.338217 [info ] [MainThread]: Setting up your profile.
+[0m14:41:41.913458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c27ca073110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c27c845bcb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c27c7a57e90>]}
+
+
+============================== 14:41:41.916199 | 881c5f27-aa41-4c4f-858d-b1f008179ec2 ==============================
+[0m14:41:41.916199 [info ] [MainThread]: Running with dbt=1.9.6
+[0m14:41:41.916736 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/home/dadosdmxcapital/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:41:46.521719 [debug] [MainThread]: Starter project path: /home/dadosdmxcapital/Área de trabalho/Novo Projeto DGU/dbt-env/lib/python3.12/site-packages/dbt/include/starter_project
+[0m14:41:46.524811 [info ] [MainThread]: 
+Your new dbt project "DGU" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:41:46.525266 [info ] [MainThread]: Setting up your profile.
+[0m14:43:07.375846 [info ] [MainThread]: Profile DGU written to /home/dadosdmxcapital/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:43:07.376930 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 85.49959, "process_in_blocks": "584", "process_kernel_time": 0.491077, "process_mem_max_rss": "352436", "process_out_blocks": "88", "process_user_time": 3.109497}
+[0m14:43:07.377695 [debug] [MainThread]: Command `dbt init` succeeded at 14:43:07.377592 after 85.50 seconds
+[0m14:43:07.378058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c27c9972570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c27949eb770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c2794d6fc20>]}
+[0m14:43:07.378417 [debug] [MainThread]: Flushing usage events
+[0m14:43:08.208728 [debug] [MainThread]: An error was encountered while trying to flush usage events
