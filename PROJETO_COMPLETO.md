@@ -54,14 +54,10 @@ python main.py
 4. 🔄 Executa modelos staging (views)
 5. 📈 Executa modelos mart (tabelas)
 
-### **Opção 2: Apenas dbt com dados de exemplo**
-```bash
-./execute_complete_pipeline.sh
-```
-
-### **Opção 3: Comandos manuais**
+### **Opção 2: Comandos manuais (se necessário)**
 ```bash
 cd DGU
+source ../dbt-env/bin/activate
 dbt seed --profiles-dir .    # Carrega dados
 dbt run --profiles-dir .     # Executa transformações
 dbt test --profiles-dir .    # Valida qualidade
@@ -135,17 +131,20 @@ dbt test --profiles-dir .    # Valida qualidade
 
 ```
 Projeto DGU/
-├── DGU/
-│   ├── seeds/ (6 CSVs + README)
+├── main.py ✅                              # Script principal do projeto
+├── extract.py ✅                           # Extração de dados dos sites
+├── load.py ✅                              # Carregamento no BigQuery
+├── dataglowup-458411-7384de8e6f21.json ✅  # Credenciais BigQuery
+├── dbt-env/ ✅                             # Ambiente virtual Python
+├── DGU/                                    # Projeto dbt
+│   ├── seeds/ (6 CSVs)                     # Dados brutos
 │   ├── models/
-│   │   ├── staging/ (6 SQLs + sources.yml)
-│   │   └── mart/ (3 SQLs + schema.yml)
-│   ├── dbt_project.yml ✅
-│   ├── profiles.yml ✅
-│   └── README.md ✅
-├── load_seeds.sh ✅
-├── dataglowup-458411-7384de8e6f21.json
-└── PROJETO_COMPLETO.md ✅
+│   │   ├── staging/ (6 SQLs)               # Views de limpeza
+│   │   └── mart/ (3 SQLs + schema.yml)     # Tabelas finais
+│   ├── dbt_project.yml ✅                  # Configuração dbt
+│   ├── profiles.yml ✅                     # Conexão BigQuery
+│   └── README.md ✅                        # Documentação dbt
+└── PROJETO_COMPLETO.md ✅                  # Documentação do projeto
 ```
 
 ## ✨ Benefícios da Implementação
