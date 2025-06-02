@@ -40,15 +40,31 @@ Quando executado, o dbt criará:
 
 ## 🚀 Como Executar
 
+### **Opção 1: Pipeline Completo com Dados Reais (Recomendado)**
 ```bash
-# Opção 1: Script automatizado
-./load_seeds.sh
+# Ativa ambiente virtual e executa tudo
+source dbt-env/bin/activate
+python main.py
+```
 
-# Opção 2: Comandos manuais
+**O que o main.py faz:**
+1. 📊 Extrai dados reais do fbref.com e transfermarkt.com
+2. 💾 Salva os dados como seeds CSV
+3. 🌱 Carrega seeds no BigQuery
+4. 🔄 Executa modelos staging (views)
+5. 📈 Executa modelos mart (tabelas)
+
+### **Opção 2: Apenas dbt com dados de exemplo**
+```bash
+./execute_complete_pipeline.sh
+```
+
+### **Opção 3: Comandos manuais**
+```bash
 cd DGU
-dbt seed    # Carrega dados brutos
-dbt run     # Executa transformações
-dbt test    # Valida qualidade dos dados
+dbt seed --profiles-dir .    # Carrega dados
+dbt run --profiles-dir .     # Executa transformações
+dbt test --profiles-dir .    # Valida qualidade
 ```
 
 ## 📋 Arquivos de Configuração
