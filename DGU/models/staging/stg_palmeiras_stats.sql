@@ -17,13 +17,13 @@ cleaned_data as (
         mp as matches_played,
         starts as matches_started,
         min as minutes_played,
-        90s as matches_90min_equivalent,
+        `90s` as matches_90min_equivalent,
         
         -- Estatísticas ofensivas
         gls as goals,
         ast as assists,
-        g_a as goals_assists,
-        g_pk as goals_non_penalty,
+        `g_a` as goals_assists,
+        `g_pk` as goals_non_penalty,
         pk as penalties_made,
         pkatt as penalties_attempted,
         
@@ -35,7 +35,7 @@ cleaned_data as (
         xg as expected_goals,
         npxg as expected_goals_non_penalty,
         xag as expected_assists,
-        npxg_xag as expected_goals_assists_non_penalty,
+        `npxg_xag` as expected_goals_assists_non_penalty,
         
         -- Progressão
         prgc as progressive_carries,
@@ -43,7 +43,7 @@ cleaned_data as (
         prgr as progressive_receptions,
         
         -- Metadados
-        data_extracao as extraction_date,
+        `data_extracao` as extraction_date,
         fonte as source_url,
         
         -- Campos calculados

@@ -48,3 +48,53 @@
 2025-06-02 15:09:22,129 - INFO - ✔ 35 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
 2025-06-02 15:09:22,129 - INFO - Resumo do envio: 3 tabelas enviadas com sucesso, 0 falhas
 2025-06-02 15:09:22,130 - INFO - Processo concluído com sucesso!
+2025-06-02 15:18:43,680 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-06-02 15:18:43,680 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-06-02 15:18:44,303 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-06-02 15:18:44,928 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-06-02 15:18:45,531 - INFO - Extraídos 3 dataframes de estatísticas
+2025-06-02 15:18:45,532 - INFO - A extrair valor de mercado de corinthians em https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1
+2025-06-02 15:18:46,337 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1: AttributeError: 'int' object has no attribute 'strip'
+2025-06-02 15:18:46,337 - WARNING - Nenhum dado de valor de mercado extraído para corinthians
+2025-06-02 15:18:46,337 - INFO - A extrair valor de mercado de palmeiras em https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1
+2025-06-02 15:18:47,572 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1: AttributeError: 'int' object has no attribute 'strip'
+2025-06-02 15:18:47,573 - WARNING - Nenhum dado de valor de mercado extraído para palmeiras
+2025-06-02 15:18:47,573 - INFO - A extrair valor de mercado de flamengo em https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1
+2025-06-02 15:18:50,003 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1: AttributeError: 'int' object has no attribute 'strip'
+2025-06-02 15:18:50,003 - WARNING - Nenhum dado de valor de mercado extraído para flamengo
+2025-06-02 15:18:50,003 - INFO - Extraídos 0 dataframes de valor de mercado
+2025-06-02 15:18:50,003 - INFO - Total de 3 dataframes para envio ao BigQuery
+2025-06-02 15:18:51,204 - INFO - Dataset DataGlowUp já existe.
+2025-06-02 15:18:51,205 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0...
+2025-06-02 15:18:55,923 - INFO - ✔ 30 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0
+2025-06-02 15:18:55,924 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0...
+2025-06-02 15:18:59,818 - INFO - ✔ 33 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0
+2025-06-02 15:18:59,820 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0...
+2025-06-02 15:19:03,188 - INFO - ✔ 35 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
+2025-06-02 15:19:03,188 - INFO - Resumo do envio: 3 tabelas enviadas com sucesso, 0 falhas
+2025-06-02 15:19:03,188 - INFO - Processo concluído com sucesso!
+2025-06-02 15:22:57,475 - INFO - Iniciando extração de dados de estatísticas de futebol...
+2025-06-02 15:22:57,475 - INFO - A extrair estatísticas de palmeiras em https://fbref.com/en/squads/abdce579/Palmeiras-Stats
+2025-06-02 15:22:58,107 - INFO - A extrair estatísticas de flamengo em https://fbref.com/en/squads/639950ae/Flamengo-Stats
+2025-06-02 15:22:58,703 - INFO - A extrair estatísticas de corinthians em https://fbref.com/en/squads/bf4acd28/Corinthians-Stats
+2025-06-02 15:22:59,313 - INFO - Extraídos 3 dataframes de estatísticas
+2025-06-02 15:22:59,313 - INFO - A extrair valor de mercado de corinthians em https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1
+2025-06-02 15:23:01,542 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/sc-corinthians/kader/verein/199/saison_id/2024/plus/1: AttributeError: 'int' object has no attribute 'strip'
+2025-06-02 15:23:01,542 - WARNING - Nenhum dado de valor de mercado extraído para corinthians
+2025-06-02 15:23:01,543 - INFO - A extrair valor de mercado de palmeiras em https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1
+2025-06-02 15:23:02,977 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/se-palmeiras/kader/verein/1023/saison_id/2024/plus/1: AttributeError: 'int' object has no attribute 'strip'
+2025-06-02 15:23:02,978 - WARNING - Nenhum dado de valor de mercado extraído para palmeiras
+2025-06-02 15:23:02,978 - INFO - A extrair valor de mercado de flamengo em https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1
+2025-06-02 15:23:23,885 - ERROR - Erro desconhecido ao processar https://www.transfermarkt.com.br/cr-flamengo/kader/verein/614/saison_id/2024/plus/1: AttributeError: 'int' object has no attribute 'strip'
+2025-06-02 15:23:23,885 - WARNING - Nenhum dado de valor de mercado extraído para flamengo
+2025-06-02 15:23:23,885 - INFO - Extraídos 0 dataframes de valor de mercado
+2025-06-02 15:23:23,885 - INFO - Total de 3 dataframes para envio ao BigQuery
+2025-06-02 15:23:24,606 - INFO - Dataset DataGlowUp já existe.
+2025-06-02 15:23:24,608 - INFO - Iniciando envio para DataGlowUp.palmeiras_tabela_0...
+2025-06-02 15:23:32,256 - INFO - ✔ 30 linhas carregadas em dataglowup-458411.DataGlowUp.palmeiras_tabela_0
+2025-06-02 15:23:32,257 - INFO - Iniciando envio para DataGlowUp.flamengo_tabela_0...
+2025-06-02 15:23:39,829 - INFO - ✔ 33 linhas carregadas em dataglowup-458411.DataGlowUp.flamengo_tabela_0
+2025-06-02 15:23:39,831 - INFO - Iniciando envio para DataGlowUp.corinthians_tabela_0...
+2025-06-02 15:23:47,264 - INFO - ✔ 35 linhas carregadas em dataglowup-458411.DataGlowUp.corinthians_tabela_0
+2025-06-02 15:23:47,264 - INFO - Resumo do envio: 3 tabelas enviadas com sucesso, 0 falhas
+2025-06-02 15:23:47,264 - INFO - Processo concluído com sucesso!

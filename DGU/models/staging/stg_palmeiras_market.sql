@@ -16,30 +16,30 @@ cleaned_data as (
         nationality,
         
         -- Informações financeiras
-        market_value_eur as market_value_euros,
-        contract_expires as contract_expiry_date,
-        
+        `market_value_eur` as market_value_euros,
+        `contract_expires` as contract_expiry_date,
+
         -- Metadados
-        data_extracao as extraction_date,
+        `data_extracao` as extraction_date,
         fonte as source_url,
         
         -- Campos calculados
-        case 
-            when contract_expires <= '2025-12-31' then 'Expiring Soon'
-            when contract_expires <= '2026-12-31' then 'Medium Term'
+        case
+            when `contract_expires` <= '2025-12-31' then 'Expiring Soon'
+            when `contract_expires` <= '2026-12-31' then 'Medium Term'
             else 'Long Term'
         end as contract_status,
-        
-        case 
-            when market_value_eur >= 20000000 then 'Very High'
-            when market_value_eur >= 10000000 then 'High'
-            when market_value_eur >= 5000000 then 'Medium'
-            when market_value_eur >= 1000000 then 'Low'
+
+        case
+            when `market_value_eur` >= 20000000 then 'Very High'
+            when `market_value_eur` >= 10000000 then 'High'
+            when `market_value_eur` >= 5000000 then 'Medium'
+            when `market_value_eur` >= 1000000 then 'Low'
             else 'Very Low'
         end as market_value_category,
-        
+
         -- Conversão para milhões para facilitar leitura
-        round(cast(market_value_eur as float64) / 1000000, 2) as market_value_millions_eur
+        round(cast(`market_value_eur` as float64) / 1000000, 2) as market_value_millions_eur
         
     from source_data
 )
