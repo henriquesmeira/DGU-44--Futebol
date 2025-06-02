@@ -2,6 +2,16 @@
 
 Pipeline completo de extração, transformação e análise de dados de futebol dos principais times brasileiros usando Python, dbt e BigQuery.
 
+## ⚙️ Configuração Inicial
+
+1. **Configure o profiles.yml:**
+   ```bash
+   cp DGU/profiles.yml.example DGU/profiles.yml
+   # Edite DGU/profiles.yml com suas credenciais
+   ```
+
+2. **Adicione suas credenciais BigQuery** no diretório raiz
+
 ## 🚀 Execução Simples
 
 ```bash

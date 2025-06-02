@@ -1,0 +1,14 @@
+DGU:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: /caminho/para/seu/arquivo-credenciais.json  # Substitua pelo caminho completo do seu arquivo de chave
+      project: seu-project-id  # Substitua pelo seu project ID do BigQuery
+      dataset: DataGlowUp  # Nome do dataset principal
+      threads: 4
+      timeout_seconds: 300
+      location: US  # ou sua região preferida
+      priority: interactive
+      retries: 1

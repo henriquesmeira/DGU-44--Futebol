@@ -1,0 +1,35 @@
+# Credenciais e configurações sensíveis
+dataglowup-458411-7384de8e6f21.json
+DGU/profiles.yml
+
+# Logs e arquivos temporários
+*.log
+main_execution.log
+DGU/logs/
+DGU/target/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Ambiente virtual
+dbt-env/
+venv/
+env/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dados temporários
+*.tmp
+*.temp
