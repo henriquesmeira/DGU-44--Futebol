@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  dgu-futebol:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dgu-futebol-pipeline
+    environment:
+      # Variáveis de ambiente para o BigQuery
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials/bigquery-credentials.json
+      - DBT_PROFILES_DIR=/app/DGU
+      - PYTHONUNBUFFERED=1
+      
+      # Configurações do projeto (podem ser sobrescritas)
+      - PROJECT_ID=dataglowup-458411
+      - DATASET_ID=DataGlowUp
+      
+    volumes:
+      # Volume para credenciais do BigQuery
+      - ./credentials:/app/credentials:ro
+      
+      # Volume para logs (persistir logs fora do container)
+      - ./logs:/app/logs
+      
+      # Volume para seeds gerados (opcional, para debug)
+      - ./DGU/seeds:/app/DGU/seeds
+      
+      # Volume para profiles.yml (configuração dbt)
+      - ./DGU/profiles.yml:/app/DGU/profiles.yml:ro
+      
+    working_dir: /app
+    
+    # Comando padrão (pode ser sobrescrito)
+    command: python main.py
+    
+    # Restart policy
+    restart: unless-stopped
+    
+    # Recursos (opcional, ajuste conforme necessário)
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '1.0'
+        reservations:
+          memory: 512M
+          cpus: '0.5'
+
+  # Serviço opcional para executar comandos dbt manualmente
+  dgu-dbt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dgu-dbt-manual
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials/bigquery-credentials.json
+      - DBT_PROFILES_DIR=/app/DGU
+      
+    volumes:
+      - ./credentials:/app/credentials:ro
+      - ./logs:/app/logs
+      - ./DGU/seeds:/app/DGU/seeds
+      - ./DGU/profiles.yml:/app/DGU/profiles.yml:ro
+      
+    working_dir: /app/DGU
+    
+    # Este serviço não inicia automaticamente
+    profiles: ["manual"]
+    
+    # Comando para executar dbt manualmente
+    command: tail -f /dev/null
+
+profiles:
+  manual:
+    # Profile para execução manual de comandos

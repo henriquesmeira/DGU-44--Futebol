@@ -1,0 +1,21 @@
+# Dependências principais do projeto
+pandas>=2.0.0
+requests>=2.28.0
+google-cloud-bigquery>=3.4.0
+pandas-gbq>=0.19.0
+
+# dbt e adaptadores
+dbt-core>=1.6.0
+dbt-bigquery>=1.6.0
+
+# Dependências para web scraping e parsing
+beautifulsoup4>=4.11.0
+lxml>=4.9.0
+html5lib>=1.1
+
+# Logging e utilitários
+python-dateutil>=2.8.0
+
+# Dependências do sistema (podem ser necessárias)
+setuptools>=65.0.0
+wheel>=0.38.0

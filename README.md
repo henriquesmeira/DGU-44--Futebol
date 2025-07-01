@@ -12,7 +12,26 @@ Pipeline completo de extração, transformação e análise de dados de futebol 
 
 2. **Adicione suas credenciais BigQuery** no diretório raiz
 
-## 🚀 Execução Simples
+## 🚀 Execução
+
+### 🐳 Opção 1: Docker (Recomendado)
+
+```bash
+# Configurar credenciais
+mkdir -p credentials
+cp /caminho/para/suas/credenciais.json credentials/bigquery-credentials.json
+
+# Configurar profiles.yml
+cp DGU/profiles.yml.example DGU/profiles.yml
+# Editar DGU/profiles.yml com suas configurações
+
+# Executar pipeline completo
+docker-compose up --build
+```
+
+📖 **Documentação completa**: [README-Docker.md](README-Docker.md)
+
+### 🐍 Opção 2: Ambiente Local
 
 ```bash
 # Ativar ambiente virtual
@@ -76,6 +95,7 @@ python main.py
 - **BigQuery** - Data warehouse
 - **Pandas** - Manipulação de dados
 - **BeautifulSoup** - Web scraping
+- **Docker** - Containerização e deploy
 
 ## 📚 Documentação Completa
 

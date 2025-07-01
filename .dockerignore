@@ -1,0 +1,59 @@
+# Ambiente virtual Python
+dbt-env/
+venv/
+env/
+.venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Logs
+*.log
+logs/
+main_execution.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+.tmp/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# dbt
+DGU/target/
+DGU/dbt_packages/
+DGU/logs/
+
+# Credenciais (serão montadas via volume)
+*.json
+credentials/
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Documentação
+README.md
+PROJETO_COMPLETO.md
+
+# Outros
+.env
+.env.local
