@@ -154,28 +154,85 @@ status() {
     docker stats --no-stream
 }
 
+# Função para inicializar Airflow
+init_airflow() {
+    print_info "Inicializando Apache Airflow 3.0..."
+    check_docker
+    check_credentials
+
+    # Definir AIRFLOW_UID
+    export AIRFLOW_UID=$(id -u)
+
+    # Executar script de inicialização do Airflow
+    ./airflow/init_airflow.sh
+}
+
+# Função para executar com Airflow
+run_airflow() {
+    print_info "Executando pipeline via Airflow..."
+    check_docker
+    check_credentials
+
+    export AIRFLOW_UID=$(id -u)
+
+    # Iniciar Airflow se não estiver rodando
+    if ! docker-compose -f docker-compose-integrated.yml ps | grep -q "airflow-webserver"; then
+        print_info "Iniciando Airflow..."
+        docker-compose -f docker-compose-integrated.yml up -d
+        sleep 30
+    fi
+
+    print_success "Airflow disponível em: http://localhost:8080"
+    print_info "Usuário: airflow | Senha: airflow"
+}
+
+# Função para parar Airflow
+stop_airflow() {
+    print_info "Parando serviços do Airflow..."
+    docker-compose -f docker-compose-integrated.yml down
+    print_success "Airflow parado!"
+}
+
+# Função para ver logs do Airflow
+logs_airflow() {
+    print_info "Mostrando logs do Airflow..."
+    docker-compose -f docker-compose-integrated.yml logs -f
+}
+
 # Função para mostrar ajuda
 help() {
     echo "🏆 Scripts DGU - Pipeline de Dados de Futebol"
     echo ""
     echo "Uso: ./docker-scripts.sh [comando]"
     echo ""
-    echo "Comandos disponíveis:"
+    echo "📋 Comandos Pipeline Tradicional:"
     echo "  setup          - Configurar ambiente inicial"
     echo "  run            - Executar pipeline completo"
     echo "  run-bg         - Executar em background"
     echo "  logs           - Ver logs em tempo real"
     echo "  dbt [cmd]      - Executar comando dbt específico"
     echo "  shell          - Acessar shell do container"
+    echo ""
+    echo "🚀 Comandos Airflow:"
+    echo "  init-airflow   - Inicializar Apache Airflow 3.0"
+    echo "  run-airflow    - Executar pipeline via Airflow"
+    echo "  stop-airflow   - Parar serviços do Airflow"
+    echo "  logs-airflow   - Ver logs do Airflow"
+    echo ""
+    echo "🛠️ Comandos Gerais:"
     echo "  status         - Ver status dos containers"
     echo "  clean          - Limpar ambiente Docker"
     echo "  help           - Mostrar esta ajuda"
     echo ""
-    echo "Exemplos:"
+    echo "📊 Exemplos:"
     echo "  ./docker-scripts.sh setup"
-    echo "  ./docker-scripts.sh run"
+    echo "  ./docker-scripts.sh init-airflow"
+    echo "  ./docker-scripts.sh run-airflow"
     echo "  ./docker-scripts.sh dbt 'seed'"
-    echo "  ./docker-scripts.sh dbt 'run --select staging'"
+    echo ""
+    echo "🌐 URLs importantes:"
+    echo "  • Airflow Web UI: http://localhost:8080"
+    echo "  • Usuário/Senha: airflow/airflow"
 }
 
 # Processar argumentos
@@ -197,6 +254,18 @@ case "${1:-help}" in
         ;;
     shell)
         shell
+        ;;
+    init-airflow)
+        init_airflow
+        ;;
+    run-airflow)
+        run_airflow
+        ;;
+    stop-airflow)
+        stop_airflow
+        ;;
+    logs-airflow)
+        logs_airflow
         ;;
     status)
         status

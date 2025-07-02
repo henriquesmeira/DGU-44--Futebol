@@ -1,0 +1,42 @@
+# Dockerfile para Apache Airflow 3.0 com projeto DGU
+FROM apache/airflow:3.0.0-python3.11
+
+# Mudar para usuário root para instalações
+USER root
+
+# Instalar dependências do sistema
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Voltar para usuário airflow
+USER airflow
+
+# Copiar requirements do Airflow
+COPY airflow/requirements-airflow.txt /requirements-airflow.txt
+
+# Instalar dependências Python
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r /requirements-airflow.txt
+
+# Copiar código fonte do projeto
+COPY --chown=airflow:root . /opt/airflow/project/
+
+# Copiar configurações do Airflow
+COPY --chown=airflow:root airflow/config/airflow.cfg /opt/airflow/airflow.cfg
+
+# Criar diretórios necessários
+RUN mkdir -p /opt/airflow/dags && \
+    mkdir -p /opt/airflow/logs && \
+    mkdir -p /opt/airflow/plugins && \
+    mkdir -p /opt/airflow/credentials && \
+    mkdir -p /opt/airflow/dbt
+
+# Definir variáveis de ambiente
+ENV AIRFLOW_HOME=/opt/airflow
+ENV PYTHONPATH="${PYTHONPATH}:/opt/airflow/project"
+
+# Expor porta do webserver
+EXPOSE 8080

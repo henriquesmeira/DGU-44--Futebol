@@ -14,7 +14,7 @@ Pipeline completo de extração, transformação e análise de dados de futebol 
 
 ## 🚀 Execução
 
-### 🐳 Opção 1: Docker (Recomendado)
+### 🤖 Opção 1: Apache Airflow 3.0 (Recomendado para Produção)
 
 ```bash
 # Configurar credenciais
@@ -25,13 +25,28 @@ cp /caminho/para/suas/credenciais.json credentials/bigquery-credentials.json
 cp DGU/profiles.yml.example DGU/profiles.yml
 # Editar DGU/profiles.yml com suas configurações
 
+# Inicializar Airflow
+./docker-scripts.sh init-airflow
+
+# Acessar interface web
+http://localhost:8080 (usuário: airflow, senha: airflow)
+```
+
+**🕐 Execução Automática**: Terças e sextas às 09:00
+📖 **Documentação completa**: [README-AIRFLOW.md](README-AIRFLOW.md)
+
+### 🐳 Opção 2: Docker Standalone
+
+```bash
+# Configurar credenciais (mesmo processo acima)
+
 # Executar pipeline completo
 docker-compose up --build
 ```
 
 📖 **Documentação completa**: [README-Docker.md](README-Docker.md)
 
-### 🐍 Opção 2: Ambiente Local
+### 🐍 Opção 3: Ambiente Local
 
 ```bash
 # Ativar ambiente virtual
@@ -90,12 +105,14 @@ python main.py
 
 ## 🛠️ Tecnologias
 
-- **Python** - Extração e orquestração
+- **Apache Airflow 3.0** - Orquestração e agendamento
+- **Python** - Extração e processamento
 - **dbt** - Transformação de dados
 - **BigQuery** - Data warehouse
 - **Pandas** - Manipulação de dados
 - **BeautifulSoup** - Web scraping
 - **Docker** - Containerização e deploy
+- **PostgreSQL** - Banco de dados do Airflow
 
 ## 📚 Documentação Completa
 
